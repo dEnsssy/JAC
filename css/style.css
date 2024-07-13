@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: Montserrat;
+  color: #FFF;
+}
+
+.container {
+  max-width: 1182px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #FFF;
+  position: relative;
+}
+.header__bgcar {
+  position: absolute;
+  top: 0;
+  z-index: -10;
+  background-image: url("/img/PC/previewCar.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 1134px;
+}
+.header__bgshadow {
+  position: absolute;
+  top: 0;
+  z-index: -9;
+  background-image: url("/img/PC/previewCarShadow.png");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+}
+.header__content {
+  padding-top: 32px;
+  padding-bottom: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__content-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 17px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.header__content-logo-img {
+  width: 144.999px;
+  height: 56.029px;
+  background: url("/img/PC/maneLogo.png") no-repeat;
+}
+.header__content-logo-text {
+  font-size: 22px;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: -3.97px;
+}
+.header__content-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 20px;
+}
+.header__content-info-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+}
+.header__content-info-text-address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #EC1C24;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+}
+.header__content-info-text-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 28px;
+}
+.header__content-info-text-nav a {
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+}
+.header__content-info-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  padding: 0 18px;
+  border: 1px solid #EC1C24;
+}
+.header__content-info-contacts p {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 25px;
+  color: #EC1C24;
+}
+
+.preview__info h1 {
+  font-size: 60px;
+  font-weight: 700;
+  padding-top: 32px;
+  margin-bottom: 30px;
+}
+.preview__info h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  max-width: 706px;
+  line-height: 49px;
+}
+.preview__info h2 > span {
+  color: #EC1C24;
+}
+.preview__info-btn {
+  padding: 17px 59px;
+  font-size: 20px;
+  font-weight: 500;
+  background: #EC1C24;
+  color: #FFF;
+  margin-bottom: 538.5px;
+}
+.preview__offer {
+  background: rgba(34, 34, 34, 0.54);
+  -webkit-backdrop-filter: blur(9.6999998093px);
+          backdrop-filter: blur(9.6999998093px);
+  padding: 37.3px 0px;
+  position: relative;
+}
+.preview__offer-shadow {
+  background: url("/img/PC/timerShadow.png");
+  position: absolute;
+  bottom: 0;
+  height: 267px;
+  width: 100%;
+  z-index: -4;
+}
+.preview__offer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.preview__offer-info > p {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 20px;
+  max-width: 255px;
+}
+.preview__offer-info-btn {
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFF;
+  background: #EC1C24;
+}

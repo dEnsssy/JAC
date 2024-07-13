@@ -1,0 +1,157 @@
+//null style
+@import "nullstyle.scss";
+//fonts
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+//vars
+@import "vars.scss";
+//mixins
+@import "mixins.scss";
+
+body {
+    font-family: Montserrat;
+    color: $textManeColor;
+}
+.container {
+    max-width: 1182px;
+    margin: 0 auto;
+}
+.header {
+    background: $textManeColor;
+    position: relative;
+    &__bgcar {
+        position: absolute;
+        top: 0;
+        z-index: -10;
+        background-image: url("/img/PC/previewCar.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        min-height: 1134px;
+    }
+    &__bgshadow {
+        position: absolute;
+        top: 0;
+        z-index: -9;
+        background-image: url("/img/PC/previewCarShadow.png");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        min-height: 100vh;
+    }
+    &__content {
+        padding-top: 32px;
+        padding-bottom: 26px;
+        display: flex;
+        justify-content: space-between;
+        &-logo {
+            display: flex;
+            gap: 17px;
+            align-items: flex-end;
+            &-img {
+                width: 144.999px;
+                height: 56.029px;
+                background: url("/img/PC/maneLogo.png") no-repeat;
+            }
+            &-text {
+                @include fontSW(22px, 500);
+                color: $textAdditionalColor;
+                margin-bottom: -3.97px;
+            }
+        }
+        &-info {
+            display: flex;
+            align-items: start;
+            gap: 20px;
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+                &-address {
+                    display: flex;
+                    flex-direction: column;
+                    color: $accentColor;
+                    @include fontSW(12px, 500);
+                    line-height: 15px;
+                }
+                &-nav {
+                    display: flex;
+                    gap: 28px;
+                    & a {
+                        color: $textAdditionalColor;
+                        @include fontSW(14px, 500);
+                    }
+                }
+            }
+            &-contacts {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                padding: 0 18px;
+                border: 1px solid $accentColor;
+                & p {
+                    @include fontSW(12px, 500);
+                    line-height: 25px;
+                    color: $accentColor;
+                }
+            }
+        }
+    }
+}
+
+.preview {
+    &__info {
+        & h1 {
+            @include fontSW(60px, 700);
+            padding-top: 32px;
+            margin-bottom: 30px;
+        }
+        & h2 {
+            @include fontSW(40px, 600);
+            margin-bottom: 40px;
+            max-width: 706px;
+            line-height: 49px;
+            & > span {
+                color: $accentColor;
+            }
+        }
+        &-btn {
+            padding: 17px 59px;
+            @include fontSW(20px, 500);
+            background: $accentColor;
+            color: $textManeColor;
+            margin-bottom: 538.5px;
+        }
+    }
+    &__offer {
+        background: rgba(34, 34, 34, 0.54);
+        backdrop-filter: blur(9.699999809265137px);
+        padding: 37.3px 0px;
+        position: relative;
+        &-shadow {
+            background: url("/img/PC/timerShadow.png");
+            position: absolute;
+            bottom: 0;
+            height: 267px;
+            width: 100%;
+            z-index: -4;
+        }
+        &-info {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            & > p {
+                @include fontSW(21px, 700);
+                line-height: 20px;
+                max-width: 255px;
+            }
+            &-btn {
+                padding: 14px 30px;
+                @include fontSW(18px, 500);
+                color: $textManeColor;
+                background: $accentColor;
+            }
+        }
+    }
+}
+
