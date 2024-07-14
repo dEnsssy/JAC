@@ -7,9 +7,11 @@
 //mixins
 @import "mixins.scss";
 
-body {
+body,
+html {
     font-family: Montserrat;
     color: $textManeColor;
+    scroll-behavior: smooth;
 }
 .container {
     max-width: 1182px;
@@ -155,59 +157,232 @@ body {
     }
 }
 
-//swiper
-
-.car-card {
-    max-width: 400px;
-    margin: auto;
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
+.models {
+    display: flex;
+    flex-direction: column;
+    gap: 68px;
+    margin-bottom: 95px;
+    & > h1 {
+        text-transform: uppercase;
+        color: $textAdditionalColor;
+        @include fontSW(40px, 700);
+        margin-top: 95px;
+        margin-bottom: 69px;
+    }
+    &__car {
+        &-card {
+            background: url("/img/PC/modelsBGJAC.png") right top no-repeat;
+            // background-size: 60vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &-info {
+                color: $textAdditionalColor;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                & > h1 {
+                    @include fontSW(40px, 800);
+                    margin-bottom: 23px;
+                }
+                & > h2 {
+                    @include fontSW(28px, 700);
+                    padding: 13px;
+                    border: 1px solid $textAdditionalColor;
+                    margin-bottom: 22px;
+                    text-align: left;
+                }
+                & > h3 {
+                    margin-left: 29px;
+                    @include fontSW(18px, 400);
+                    line-height: 16px;
+                    margin-bottom: 7px;
+                }
+                &-price {
+                    text-align: right;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 8px;
+                    gap: 15px;
+                    & p {
+                        @include fontSW(20px, 400);
+                    }
+                    &-1 {
+                        @include fontSW(30px, 600);
+                        margin-left: 27px;
+                    }
+                    &-2 {
+                        margin-left: 46px;
+                        @include fontSW(20px, 600);
+                    }
+                }
+                &-btn {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    @include fontSW(20px, 500);
+                    &1 {
+                        padding: 22px 118px;
+                        color: $accentColor;
+                        border: 1px solid $accentColor;
+                        background: white;
+                    }
+                    &2 {
+                        color: white;
+                        padding: 22px 126px;
+                        background: $accentColor;
+                    }
+                }
+            }
+        }
+        &-image {
+            position: relative;
+            margin-top: 31px;
+            width: 30vw;
+            max-width: 600px;
+        }
+        &-details {
+            margin-top: 47px;
+            background: $textAdditionalColor;
+            width: 100%;
+            height: 156px;
+            // z-index: -5;
+            padding: 0 32px;
+        }
+    }
+    &__color {
+        &-selector {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 22px;
+        }
+        &-btn,
+        &-btn-arrow {
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 50%;
+            margin: 0 5px;
+            position: relative;
+        }
+        &-btn.active {
+            border: 1px solid black;
+        }
+        &-btn.active::after {
+            content: url("/img/PC/checkColor.svg");
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+        }
+        &-btn-arrow {
+            background: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+    }
 }
-
-.car-image {
-    position: relative;
-    width: 100%;
-    height: 200px;
-}
-
 .swiper-container {
     width: 100%;
-    height: 100%;
+    height: 100px;
+    color: $textAdditionalColor;
 }
-
 .swiper-slide img {
     width: 100%;
     height: auto;
 }
 
-.color-selector {
-    margin-top: 20px;
+/* КАСТОМНЫЙ СЛАЙДЕР ДЛЯ  car-details */
+.custom-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+}
+.custom-slider-wrapper svg {
+    width: 130px;
+}
+.custom-slider-wrapper {
     display: flex;
     align-items: center;
+    // gap: 1vw;
+    // width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+.custom-slider-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    @include fontSW(20px, 400);
+    color: white;
+    text-align: center;
 }
 
-.color-btn,
-.arrow-btn {
-    width: 30px;
-    height: 30px;
+.custom-slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.custom-slider-nav button {
+    background: none;
     border: none;
-    border-radius: 50%;
-    margin: 0 5px;
+    color: white;
+    padding: 10px;
     cursor: pointer;
 }
-
-.arrow-btn {
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: 20px;
+//устанавливаю ограничение на ширину для адаптивности
+.custom-pc-slider-slide:nth-child(1) {
+    max-width: 250px;
+}
+.custom-pc-slider-slide:nth-child(3) {
+    max-width: 225px;
+}
+.custom-pc-slider-slide:nth-child(5) {
+    max-width: 149px;
+}
+.custom-pc-slider-slide:nth-child(7) {
+    max-width: 141px;
+}
+.custom-pc-slider-slide:nth-child(9) {
+    max-width: 205px;
 }
 
-.car-details {
-    margin-top: 20px;
+/* Стили для мобильной и ПК версии */
+.custom-pc-view {
+    display: none;
+}
+
+.custom-mobile-view {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .custom-pc-view {
+        display: block;
+    }
+    .custom-mobile-view {
+        display: none;
+    }
+
+    .custom-pc-slider-slide {
+        min-width: 10%;
+    }
+}
+@media (max-width: 767px) {
+    .custom-slider-slide {
+        min-width: 50%; /* для двух слайдов на мобилке */
+    }
 }
