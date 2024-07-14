@@ -5,6 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Официальный дилер JAC</title>
         <link rel="shortcut icon" href="/img/icon.svg" type="image/png" />
+        <!-- Swiper -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+        />
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+        <script src="script.js" defer></script>
         <link rel="stylesheet" href="./css/style.css" />
     </head>
     <body>
@@ -86,11 +94,56 @@
                 </div>
             </section>
             <section class="models container">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
+                <div class="car-card">
+                    <div class="car-image">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/img/PC/modelsCar1.png"
+                                        alt="Red Car"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/img/PC/modelsCar2.png"
+                                        alt="White Car"
+                                    />
+                                </div>
+                                <div class="swiper-slide">
+                                    <img
+                                        src="/img/PC/modelsCar3.png"
+                                        alt="Black Car"
+                                    />
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="color-selector">
+                        <button class="arrow-btn" id="prev-color">&lt;</button>
+                        <button
+                            class="color-btn"
+                            data-color="0"
+                            style="background-color: red"
+                        ></button>
+                        <button
+                            class="color-btn"
+                            data-color="1"
+                            style="background-color: white"
+                        ></button>
+                        <button
+                            class="color-btn"
+                            data-color="2"
+                            style="background-color: black"
+                        ></button>
+                        <button class="arrow-btn" id="next-color">&gt;</button>
+                    </div>
+                    <div class="car-details">
+                        <h2>JAC JS3</h2>
+                        <p>Цена от 1 699 000 Р</p>
+                        <button>Стоимость по акции</button>
+                        <button>Рассчитать кредит</button>
+                    </div>
                 </div>
             </section>
         </main>

@@ -277,3 +277,70 @@ body {
   color: #FFF;
   background: #EC1C24;
 }
+
+.car-card {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.car-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+}
+
+.color-selector {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.color-btn,
+.arrow-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.arrow-btn {
+  background-color: #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.car-details {
+  margin-top: 20px;
+}
