@@ -100,3 +100,16 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 });
+
+//раздел конфигурации - кнопка показать еще
+
+document
+    .querySelector(".configurations__cars-show")
+    .addEventListener("click", () => {
+        let configCarCards = document.querySelectorAll(
+            ".configurations__cars-card.disable"
+        );
+        configCarCards.forEach((card) => {
+            card.classList.remove("disable");
+        });
+    });

@@ -386,3 +386,455 @@ html {
         min-width: 50%; /* для двух слайдов на мобилке */
     }
 }
+
+.configurations {
+    color: $textAdditionalColor;
+    & > h2 {
+        @include fontSW(40px, 700);
+        margin-bottom: 40px;
+    }
+    &__filters {
+        display: flex;
+        justify-content: space-between;
+        max-width: 673px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+    &__cars {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        &-show {
+            background: none;
+            width: 160px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            @include fontSW(18px, 400);
+            line-height: 15.96px;
+            text-decoration-line: underline;
+            margin-bottom: 95px;
+        }
+        &-card {
+            border-bottom: 2px solid $textAdditionalColor;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+            &-left {
+                & > div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    max-width: 155px;
+                    margin-bottom: 13px;
+                }
+                & h1 {
+                    @include fontSW(26px, 600);
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                }
+                & h2 {
+                    @include fontSW(20px, 500);
+                    text-transform: uppercase;
+                    color: $accentColor;
+                }
+                & > img {
+                    margin-bottom: 12px;
+                }
+            }
+            &-center {
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 20px;
+                width: 50%;
+                justify-content: space-between;
+                &-fragment {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    @include fontSW(20px, 400);
+                    line-height: 24px;
+                }
+            }
+            &-right {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                & h2 {
+                    @include fontSW(25px, 600);
+                    margin-bottom: 3px;
+                }
+                & h3 {
+                    @include fontSW(17px, 600);
+                    color: rgba(34, 34, 34, 0.74);
+                    margin-bottom: 24px;
+                }
+                & > div {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 10px;
+                }
+                &-btn {
+                    height: 58px;
+                    line-height: 15.96px;
+                }
+                &-btn1 {
+                    @include fontSW(18px, 400);
+                    color: $accentColor;
+                    background: none;
+                    border: 1px solid $accentColor;
+                }
+                &-btn2 {
+                    @include fontSW(18px, 500);
+                    color: white;
+                    background: $accentColor;
+                }
+            }
+        }
+    }
+}
+.configurations__cars-card.disable {
+    display: none;
+}
+
+//убираю дефолтную стрелочку из select и добавляю свою
+.configurations__filters-filter {
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-bottom: 1px solid $textAdditionalColor;
+    width: 280px;
+    @include fontSW(20px, 500);
+    line-height: 40px;
+}
+
+.configurations__filters-filter:not([multiple]) {
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: url("/img/PC/selectArrow.svg");
+}
+
+/* скроет иконку стрелки в IE */
+.configurations__filters-filter::-ms-expand {
+    display: none;
+}
+
+.credit {
+    color: $textAdditionalColor;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    &__position {
+        display: flex;
+        align-items: center;
+    }
+    &__text {
+        min-width: 580px;
+        & h1 {
+            @include fontSW(40px, 700);
+            color: rgba(34, 34, 34, 0.9);
+            margin-bottom: 17px;
+        }
+        & h2 {
+            @include fontSW(30px, 600);
+            line-height: 35px;
+            color: black;
+            max-width: 575px;
+            margin-bottom: 20px;
+        }
+        &-list {
+            margin-bottom: 43px;
+            & > div {
+                color: black;
+                display: flex;
+                align-items: center;
+                gap: 22px;
+                @include fontSW(25px, 500);
+                line-height: 24px;
+            }
+        }
+        &-btn {
+            height: 60px;
+            padding: 0px 157px;
+            color: white;
+            background: $accentColor;
+            @include fontSW(18px, 500);
+            line-height: 15.96px;
+            margin-bottom: 30px;
+        }
+        & > label {
+            display: flex;
+            gap: 10px;
+        }
+    }
+    &__img {
+        max-width: 950px;
+        // width: 100%;
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+//СТИЛИЗАЦИЯ СОБСТВЕННОГО ЧЕКБОКСА
+
+input[type="checkbox"] {
+    display: none;
+}
+/* Контейнер для кастомного чекбокса */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+/* Кастомный чекбокс */
+.custom-checkbox .checkmark {
+    width: 20px;
+    height: 15px;
+    background-color: none;
+    border-radius: 4px;
+    border: 2px solid #aeafb2;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* Состояние выбранного чекбокса */
+input[type="checkbox"]:checked + .checkmark {
+    background-color: #67c8e2;
+}
+
+/* Добавляем галочку */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: none;
+}
+
+/* Отображаем галочку при выборе */
+input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+}
+
+.trade {
+    color: $textAdditionalColor;
+    &__position {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    &__img {
+        max-width: 977 px;
+        // width: 100%;
+        & img {
+            width: 100%;
+        }
+    }
+    &__text {
+        display: flex;
+        flex-direction: column;
+        & h1 {
+            @include fontSW(40px, 700);
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+        & p {
+            @include fontSW(25px, 500);
+            line-height: 115%;
+            margin-bottom: 46px;
+            max-width: 469px;
+        }
+        & form {
+            display: flex;
+            gap: 14px;
+            flex-direction: column;
+        }
+        & input[type="number"] {
+            border: 1px solid #585858;
+            background: #fff;
+            color: #585858;
+            line-height: 15.96px;
+            @include fontSW(18px, 500);
+            padding: 17px 9px;
+        }
+        & input[type="text"] {
+            background: rgba(0, 0, 0, 0.16);
+            line-height: 15.96px;
+            @include fontSW(18px, 500);
+            padding: 17px 9px;
+            color: #717171;
+        }
+        & button {
+            height: 60px;
+            padding: 0px 164px;
+            background: $accentColor;
+            color: white;
+            @include fontSW(18px, 500);
+        }
+    }
+}
+.trade__select {
+    font: inherit;
+    letter-spacing: inherit;
+    word-spacing: inherit;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    color: #585858;
+    line-height: 15.96px;
+    @include fontSW(18px, 500);
+    padding: 17px 9px;
+    border: 1px solid #585858;
+}
+.trade__select:not([multiple]) {
+    background-repeat: no-repeat;
+    background-position: center right 9px;
+    background-image: url("/img/PC/tradeArrow.svg");
+}
+.trade__select::-ms-expand {
+    display: none;
+}
+//убираю стрелчки у type='number'
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.contacts {
+    width: 100%;
+    background: url("/img/PC/contactsBG.png") no-repeat;
+    background-size: cover;
+    padding-top: 517px;
+    &__content {
+        padding: 40px 50px;
+        background: $textAdditionalColor;
+        display: flex;
+        justify-content: space-between;
+        &-left {
+            & h1 {
+                @include fontSW(23px, 700);
+                text-transform: uppercase;
+
+                margin-bottom: 20px;
+            }
+            & a {
+                @include fontSW(17px, 500);
+                color: white;
+                line-height: 25px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+            & p {
+                @include fontSW(17px, 500);
+
+                line-height: 23px;
+                max-width: 270px;
+            }
+        }
+        &-right {
+            & h1 {
+                @include fontSW(23px, 700);
+                text-transform: uppercase;
+                margin-bottom: 7px;
+            }
+            & p {
+                @include fontSW(17px, 500);
+                line-height: 19px;
+                margin-bottom: 30px;
+            }
+            & form {
+                height: 67px;
+                display: flex;
+                gap: 20px;
+                & input {
+                    height: 100%;
+                    padding: 0 20px;
+                    line-height: 15.96px;
+                    @include fontSW(18px, 500);
+                    color: #bbb;
+                    background: rgba(255, 255, 255, 0.26);
+                }
+                & button {
+                    @include fontSW(20px, 500);
+                    padding: 0 41px;
+                    color: white;
+                    background: $accentColor;
+                    height: 67px;
+                    line-height: 21.04px;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background: $textAdditionalColor;
+    height: 533px;
+    &__content {
+        padding-top: 92px;
+        display: flex;
+        gap: 36px;
+        &-logo {
+            display: flex;
+            gap: 20px;
+            & p {
+                margin-top: 40px;
+                @include fontSW(22px, 500);
+            }
+        }
+        &-text {
+            display: flex;
+            flex-direction: column;
+            margin-top: 40px;
+            &-other {
+                & p {
+                    @include fontSW(10px, 400);
+                    color: #939393;
+                    line-height: 15.96px;
+                    text-transform: uppercase;
+                    margin-bottom: 4px;
+                }
+                & h2 {
+                    color: #bbb;
+                    @include fontSW(10px, 400);
+                    line-height: 15.96px;
+                    margin-bottom: 16px;
+                }
+                & a {
+                    @include fontSW(12px, 400);
+                    line-height: 20.02px;
+                    color: #fff;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+        & nav {
+            margin-bottom: 24px;
+        }
+        & ul {
+            height: 100%;
+            display: flex;
+            gap: 24px;
+            align-items: flex-end;
+            & a {
+                @include fontSW(14px, 500);
+                color: white;
+                line-height: 24px;
+            }
+        }
+    }
+}
