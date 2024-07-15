@@ -838,3 +838,201 @@ input[type="number"]::-webkit-inner-spin-button {
         }
     }
 }
+
+// popup windows
+/* Основные стили для модального окна */
+.modal {
+    &__call {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.56);
+        /* Содержимое модального окна */
+        &-content {
+            background: url("/img/PC/modal1CarBg.png") top right no-repeat;
+            margin: 15% auto; /* 15% от верха и центрировано */
+            padding: 40px 50px;
+            max-width: 700px;
+            width: 100%; /* Может быть больше или меньше, в зависимости от размера экрана */
+            position: relative;
+            z-index: 11;
+            overflow: hidden;
+            & img {
+                z-index: -11;
+                position: absolute;
+                left: 0;
+                top: 0;
+                max-width: 1104px;
+                width: 100%;
+            }
+        }
+        &-body {
+            & h2 {
+                @include fontSW(27px, 700);
+                line-height: 35px;
+                margin-bottom: 4px;
+            }
+            & p {
+                max-width: 390px;
+                @include fontSW(18px, 400);
+                line-height: 18px;
+                margin-bottom: 102px;
+            }
+            & form {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 10px;
+                & input {
+                    @include fontSW(14px, 400);
+                    line-height: 16px;
+                    padding: 11px 20px;
+                    width: 100%;
+                    max-width: 238px;
+                    border: 1px solid #ccc;
+                }
+                & button {
+                    line-height: 15.96px;
+                    @include fontSW(12px, 700);
+                    padding: 13px 45px;
+                    width: 100%;
+                    max-width: 238px;
+                    color: white;
+                    background: $accentColor;
+                }
+            }
+        }
+    }
+    &__credit {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.56);
+        /* Содержимое модального окна */
+        &-content {
+            background: url("/img/PC/modal2CarBg.png") top right no-repeat;
+            margin: 15% auto; /* 15% от верха и центрировано */
+            padding: 22px 50px;
+            max-width: 700px;
+            width: 100%; /* Может быть больше или меньше, в зависимости от размера экрана */
+            position: relative;
+            z-index: 11;
+            overflow: hidden;
+            & img {
+                z-index: -11;
+                position: absolute;
+                left: 0;
+                top: 0;
+                max-width: 1104px;
+                width: 100%;
+            }
+        }
+        &-body {
+            & h1 {
+                @include fontSW(27px, 700);
+                line-height: 35px;
+                margin-bottom: 10px;
+                & span {
+                    color: $accentColor;
+                }
+            }
+            & ul {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                margin-bottom: 20px;
+                & li {
+                    @include fontSW(18px, 400);
+                    display: flex;
+                    align-items: center;
+                    gap: 17px;
+                }
+            }
+            & form {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                gap: 10px;
+                & input {
+                    @include fontSW(14px, 400);
+                    line-height: 16px;
+                    padding: 11px 20px;
+                    width: 100%;
+                    max-width: 238px;
+                    border: 1px solid #ccc;
+                }
+                & button {
+                    line-height: 15.96px;
+                    @include fontSW(12px, 700);
+                    padding: 13px 45px;
+                    width: 100%;
+                    max-width: 238px;
+                    color: white;
+                    background: $accentColor;
+                }
+            }
+        }
+    }
+    &__success {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.56);
+        /* Содержимое модального окна */
+        &-content {
+            background: url("/img/PC/modal2CarBg.png") top right no-repeat;
+            margin: 15% auto; /* 15% от верха и центрировано */
+            padding: 22px 50px;
+            max-width: 700px;
+            height: 100%;
+            width: 100%; /* Может быть больше или меньше, в зависимости от размера экрана */
+            position: relative;
+            z-index: 11;
+            overflow: hidden;
+            & img {
+                z-index: -11;
+                position: absolute;
+                left: 0;
+                top: 0;
+                max-width: 1104px;
+                width: 100%;
+            }
+        }
+        &-body {
+
+            & h1 {
+                @include fontSW(27px, 700);
+                margin-top: 80px;
+                margin-bottom: 13px;
+            }
+            & h2 {
+                @include fontSW(18px,400)
+            }
+        }
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -113,3 +113,48 @@ document
             card.classList.remove("disable");
         });
     });
+
+// popup windows
+// call popup
+let modal = document.querySelector(".modal__call");
+let openBtns = document.querySelectorAll(".openModalBtn");
+// credit popup
+let modalCredit = document.querySelector(".modal__credit");
+let openBtnsCredit = document.querySelectorAll(".openModalBtnCredit");
+//success popup
+let modalSuccess = document.querySelector(".modal__success");
+let btnsSuccess = document.querySelectorAll(".finish");
+let span = document.querySelectorAll(".close");
+
+openBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        modal.style.display = "block";
+    });
+});
+openBtnsCredit.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        modalCredit.style.display = "block";
+    });
+});
+btnsSuccess.forEach((btnsFinis) => {
+    btnsFinis.addEventListener("click", () => {
+        modalSuccess.style.display = "block";
+        modal.style.display = "none";
+        modalCredit.style.display = "none";
+    });
+});
+span.forEach((spn) => {
+    spn.addEventListener("click", () => {
+        modal.style.display = "none";
+        modalCredit.style.display = "none";
+        modalSuccess.style.display = "none";
+    });
+});
+// если нажимает в любом месте вне модального окна, закрыть его
+window.onclick = function (event) {
+    if (event.target == modal || event.target == modalCredit || event.target == modalSuccess) {
+        modal.style.display = "none";
+        modalCredit.style.display = "none";
+        modalSuccess.style.display = "none";
+    }
+};
