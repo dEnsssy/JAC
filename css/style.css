@@ -1361,6 +1361,9 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .close {
+  position: absolute;
+  right: 5%;
+  top: 2%;
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -1809,6 +1812,162 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 10px;
     font-weight: 500;
     line-height: 24px;
+  }
+  .modal__call-content {
+    background: url("/img/mobile/modal1.png") no-repeat;
+    padding: 30px;
+    max-width: 360px;
+    background-position: top 25px center;
+    z-index: 11;
+  }
+  .modal__call-content img {
+    display: none;
+  }
+  .modal__call-content1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 372px;
+    height: 260px;
+    z-index: -1;
+    background: url(/img/mobile/modal1Shadow1.png) no-repeat;
+  }
+  .modal__call-content2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 372px;
+    height: 335px;
+    z-index: -1;
+    background: url(/img/mobile/modal1Shadow2.png) no-repeat;
+  }
+  .modal__call-body {
+    text-align: center;
+  }
+  .modal__call-body h2 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    margin-bottom: 15px;
+  }
+  .modal__call-body p {
+    max-width: 344px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 15px;
+    margin-bottom: 147px;
+  }
+  .modal__call-body form {
+    width: 100%;
+  }
+  .modal__call-body form input {
+    min-width: 100%;
+  }
+  .modal__call-body form button {
+    min-width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .modal__call-body form .custom-checkbox {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 30px;
+  }
+  .modal__credit-content {
+    background: url("/img/mobile/modal2.png") no-repeat;
+    padding: 30px 10px;
+    max-width: 360px;
+    background-position: top 1px center;
+    z-index: 11;
+  }
+  .modal__credit-content img {
+    display: none;
+  }
+  .modal__credit-content1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 372px;
+    height: 260px;
+    z-index: -1;
+    background: url(/img/mobile/modal1Shadow1.png) no-repeat;
+  }
+  .modal__credit-content2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 372px;
+    height: 335px;
+    z-index: -1;
+    background: url(/img/mobile/modal1Shadow2.png) no-repeat;
+  }
+  .modal__credit-body {
+    text-align: center;
+  }
+  .modal__credit-body h1 {
+    font-size: 18px;
+    font-weight: 700;
+    min-width: 342px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  .modal__credit-body ul {
+    margin-bottom: 62px;
+  }
+  .modal__credit-body ul li {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .modal__credit-body form {
+    width: 100%;
+  }
+  .modal__credit-body form input {
+    min-width: 100%;
+  }
+  .modal__credit-body form button {
+    min-width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .modal__credit-body form .custom-checkbox {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 30px;
+  }
+  .modal__success-content {
+    background: url("/img/mobile/modal3.png") top center no-repeat;
+    padding: 30px;
+    max-width: 360px;
+    height: 449px;
+    z-index: 11;
+  }
+  .modal__success-content img {
+    display: none;
+  }
+  .modal__success-content2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 335px;
+    z-index: -1;
+    background: url(/img/mobile/modal1Shadow2.png) no-repeat;
+  }
+  .modal__success-body {
+    text-align: center;
+  }
+  .modal__success-body h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 21px;
+    margin-top: 246px;
+  }
+  .checkmark::after {
+    left: 3px;
   }
   .custom-checkbox {
     font-size: 12px;
