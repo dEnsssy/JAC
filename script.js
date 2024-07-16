@@ -152,9 +152,24 @@ span.forEach((spn) => {
 });
 // если нажимает в любом месте вне модального окна, закрыть его
 window.onclick = function (event) {
-    if (event.target == modal || event.target == modalCredit || event.target == modalSuccess) {
+    if (
+        event.target == modal ||
+        event.target == modalCredit ||
+        event.target == modalSuccess
+    ) {
         modal.style.display = "none";
         modalCredit.style.display = "none";
         modalSuccess.style.display = "none";
     }
 };
+
+//burger menu
+let burgerBtn = document.querySelector(".burgerMenuBtn");
+let burgerMenu = document.querySelector(".burgerMenu");
+let closeBurger = document.getElementById("closeBurger");
+burgerBtn.addEventListener("click", () => {
+    burgerMenu.style.display = "block";
+});
+closeBurger.addEventListener("click", () => {
+    burgerMenu.style.display = "none";
+})
