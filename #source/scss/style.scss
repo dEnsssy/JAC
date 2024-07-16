@@ -14,7 +14,8 @@ html {
     scroll-behavior: smooth;
 }
 .container {
-    max-width: 1182px;
+    // max-width: 1182px;
+    max-width: 62.5%;
     margin: 0 auto;
 }
 .header {
@@ -77,6 +78,7 @@ html {
                 }
                 &-nav {
                     display: flex;
+                    flex-wrap: wrap;
                     gap: 28px;
                     & a {
                         color: $textAdditionalColor;
@@ -122,7 +124,8 @@ html {
             @include fontSW(20px, 500);
             background: $accentColor;
             color: $textManeColor;
-            margin-bottom: 538.5px;
+            // margin-bottom: 548.5px;
+            margin-bottom: 50vh;
         }
     }
     &__offer {
@@ -140,6 +143,7 @@ html {
         }
         &-info {
             display: flex;
+            justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             & > p {
@@ -244,10 +248,10 @@ html {
         }
         &-details {
             margin-top: 47px;
+            max-width: 62.5vw;
             background: $textAdditionalColor;
             width: 100%;
             height: 156px;
-            // z-index: -5;
             padding: 0 32px;
         }
     }
@@ -1011,14 +1015,13 @@ input[type="number"]::-webkit-inner-spin-button {
             }
         }
         &-body {
-
             & h1 {
                 @include fontSW(27px, 700);
                 margin-top: 80px;
                 margin-bottom: 13px;
             }
             & h2 {
-                @include fontSW(18px,400)
+                @include fontSW(18px, 400);
             }
         }
     }
@@ -1035,4 +1038,399 @@ input[type="number"]::-webkit-inner-spin-button {
 .close:focus {
     text-decoration: none;
     cursor: pointer;
+}
+.invisibleOnPC {
+    display: none;
+}
+
+// адаптив под телефоны+
+@media (max-width: 1182px) {
+    html {
+        width: 110%;
+    }
+    .container {
+        max-width: 90%;
+    }
+    .invisibleOnMobile {
+        display: none;
+    }
+    .invisibleOnPC {
+        display: block;
+    }
+    .header {
+        &__bgcar {
+            background-image: url("/img/mobile/previewCarBg.png");
+            min-height: 50vh;
+            background-position: center;
+            background-size: cover;
+        }
+        &__bgshadow {
+            background-image: url("/img/mobile/previewBgShadow.png");
+            min-height: 130vh;
+        }
+        &__content {
+            padding: 18px 0;
+            &-logo {
+                gap: 8px;
+                &-img {
+                    width: 80px;
+                    height: 35px;
+                    background: url("/img/mobile/maneLogo.png") no-repeat;
+                }
+                &-text {
+                    @include fontSW(12px, 500);
+                    margin-bottom: 0;
+                }
+            }
+            &-info {
+                &-mobile {
+                    display: flex;
+                    align-items: center;
+                    gap: 5vw;
+                }
+            }
+        }
+    }
+    .preview {
+        &__info {
+            & h1 {
+                @include fontSW(35px, 600);
+                padding-top: 22px;
+                margin-bottom: 13px;
+            }
+            & h2 {
+                @include fontSW(20px, 500);
+                line-height: normal;
+                margin-bottom: 15vh;
+            }
+        }
+        &__offer {
+            padding: 20px 0;
+            &-info {
+                flex-direction: column;
+                gap: 10px;
+                & > p {
+                    @include fontSW(12px, 400);
+                    line-height: 11px;
+                    text-align: center;
+                }
+                &-btn {
+                    padding: 11.5px 26px;
+                    @include fontSW(16px, 500);
+                }
+            }
+        }
+    }
+    .models {
+        gap: 34px;
+        & > h1 {
+            @include fontSW(21px, 700);
+            margin-top: 40px;
+            margin-bottom: 34px;
+        }
+        &__car {
+            &-card {
+                position: relative;
+                background: url("/img/mobile/modelsCarBg.png") 0px 120px
+                    no-repeat;
+                background-size: 100%;
+                &-info {
+                    align-items: center;
+                    margin-top: 180px;
+                    width: 100%;
+                    & > h1 {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+
+                        @include fontSW(40px, 800);
+                    }
+                    & h2 {
+                        @include fontSW(18px, 700);
+                        position: absolute;
+                        padding: 8px 16px;
+                        top: 58px;
+                        left: 0;
+                    }
+                    &-price {
+                        & p {
+                            @include fontSW(12px, 400);
+                        }
+                        &-1 {
+                            @include fontSW(16px, 600);
+                            margin-left: 44px;
+                        }
+                        &-2 {
+                            @include fontSW(16px, 600);
+                            margin-left: 18px;
+                        }
+                    }
+                    &-btn {
+                        @include fontSW(16px, 500);
+                        &1 {
+                            padding: 16px 74px;
+                        }
+                        &2 {
+                            padding: 16px 80px;
+                        }
+                    }
+                }
+            }
+            &-image {
+                min-width: 100vw;
+                padding-top: 155px;
+                margin: 0 auto;
+                & img {
+                    margin-left: -30px;
+                }
+            }
+            &-details {
+                position: relative;
+                position: absolute;
+                top: 450px;
+                left: 0;
+                min-width: 100%;
+            }
+        }
+        &__color {
+            &-selector {
+                margin-bottom: 172px;
+            }
+        }
+    }
+    .custom-slider-slide {
+        @include fontSW(14px, 400);
+    }
+
+    .configurations {
+        & > h2 {
+            @include fontSW(21px, 700);
+            margin-bottom: 20px;
+        }
+        &__filters {
+            flex-direction: column;
+            gap: 20px;
+            &-filter {
+                width: 100%;
+            }
+        }
+        &__cars {
+            gap: 20px;
+            &-show {
+            }
+            &-card {
+                border: none;
+                flex-wrap: wrap;
+                justify-content: center;
+                &-left {
+                    & > div {
+                        max-width: 100%;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+                    }
+                    & > img {
+                        margin-bottom: -20px;
+                        max-width: 100%;
+                    }
+                }
+                &-center {
+                    width: 80%;
+                    &-fragment {
+                        @include fontSW(13px, 400);
+                    }
+                }
+                &-right {
+                    width: 100%;
+                    align-items: center;
+                    & h2 {
+                        margin-bottom: 13px;
+                    }
+                    & h3 {
+                        margin-bottom: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .credit {
+        margin-bottom: 40px;
+        justify-content: center;
+        &__position {
+            flex-direction: column-reverse;
+        }
+        &__text {
+            min-width: 0;
+            max-width: 90%;
+            margin: 0 auto;
+            margin-top: 20px;
+            & h1 {
+                @include fontSW(21px, 700);
+                margin-bottom: 10px;
+            }
+            & h2 {
+                @include fontSW(16px, 600);
+                margin-bottom: 7px;
+            }
+            &-list {
+                margin-bottom: 25px;
+                & > div {
+                    @include fontSW(14px, 500);
+                    gap: 14px;
+                }
+            }
+            &-btn {
+                padding: 17px 80px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .trade {
+        justify-content: center;
+        &__position {
+            flex-direction: column;
+        }
+        &__text {
+            min-width: 0;
+            max-width: 90%;
+            margin: 0 auto;
+            margin-top: 20px;
+            & h1 {
+                margin-top: -50px;
+                @include fontSW(21px, 700);
+                margin-bottom: 10px;
+            }
+            & p {
+                @include fontSW(16px, 500);
+                margin-bottom: 13px;
+            }
+            &-list {
+                margin-bottom: 25px;
+                & > div {
+                    @include fontSW(14px, 500);
+                    gap: 14px;
+                }
+            }
+            & button {
+                padding: 17px 80px;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .contacts {
+        background: url(/img/mobile/contactsBGMap.png) no-repeat;
+        background-size: 100%;
+        padding-top: 283px;
+        &__content {
+            text-align: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+            min-width: 321px;
+            min-height: 309px;
+            &-left {
+                & h1 {
+                    @include fontSW(16px, 700);
+                    margin-bottom: 9px;
+                }
+                & a {
+                    @include fontSW(11px, 500);
+                    margin-bottom: 9px;
+                }
+                & p {
+                    @include fontSW(11px, 500);
+                    margin-bottom: 48px;
+                }
+            }
+            &-right {
+                margin-top: -100px;
+                & h1 {
+                    @include fontSW(16px, 700);
+                    margin-bottom: 9px;
+                }
+                & p {
+                    @include fontSW(11px, 500);
+                    margin-bottom: 20px;
+                }
+                & form {
+                    max-width: 281px;
+                    flex-wrap: wrap;
+                    gap: 0px;
+                    align-items: center;
+                    justify-content: center;
+                    & input {
+                        width: 100%;
+                        height: 49px;
+                        margin-bottom: 20px;
+                    }
+                    & button {
+                        @include fontSW(16px, 500);
+                        height: 49px;
+                        width: 100%;
+                        padding-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+    .footer {
+        margin-top: 10px;
+        height: 345px;
+        &__content {
+            flex-wrap: wrap;
+            padding-top: 24px;
+            gap: 24px;
+            &-logo {
+                gap: 13px;
+                & img {
+                    display: none;
+                }
+                & div {
+                    width: 84px;
+                    height: 32.307px;
+                    background: url(/img/mobile/footerLogo.png) no-repeat;
+                }
+                & p {
+                    margin-top: 20px;
+                    @include fontSW(12px, 500);
+                }
+            }
+            &-text {
+                margin-top: 0;
+                &-other {
+                    & p {
+                        max-width: 320px;
+                        @include fontSW(10px, 400);
+                        margin-bottom: 10px;
+                    }
+                    & h2 {
+                        color: #939393;
+                        @include fontSW(10px, 400);
+                        text-transform: uppercase;
+                        margin-bottom: 19px;
+                    }
+                    & a {
+                    }
+                }
+            }
+            & nav {
+                margin-bottom: 0;
+                margin-bottom: 23px;
+            }
+            & ul {
+                flex-direction: column;
+                align-items: start;
+                gap: 0px;
+                & a {
+                    @include fontSW(10px, 500);
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    .custom-checkbox {
+        @include fontSW(12px, 400);
+    }
 }

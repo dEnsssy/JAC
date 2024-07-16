@@ -24,7 +24,7 @@
                     <a href="#" class="header__content-logo-img"></a>
                     <div class="header__content-logo-text">Автофром</div>
                 </div>
-                <div class="header__content-info">
+                <div class="header__content-info invisibleOnMobile">
                     <div class="header__content-info-text">
                         <div class="header__content-info-text-address">
                             <p>город Москва, МКАД, 44-й км, влд. 1 стр. 2</p>
@@ -69,6 +69,10 @@
                         <p>+7 (499) 688-90-76</p>
                     </a>
                 </div>
+                <div class="header__content-info-mobile invisibleOnPC">
+                    <img src="./img/mobile/headerPhone.png" alt="" />
+                    <img src="./img/mobile/burgerMenu.png" alt="" />
+                </div>
             </div>
         </header>
         <main class="main">
@@ -79,7 +83,7 @@
                         УНИКАЛЬНЫЕ УСЛОВИЯ НА <span>JAC</span> Первоначальный
                         взнос от 0%
                     </h2>
-                    <button class="preview__info-btn openModalBtn">
+                    <button class="preview__info-btn openModalBtn invisibleOnMobile">
                         Получить предложение
                     </button>
                 </div>
@@ -87,7 +91,12 @@
                     <div class="preview__offer-shadow"></div>
                     <div class="preview__offer-info container">
                         <p>Успейте получить персональное предложение</p>
-                        <script src="//megatimer.ru/get/875759ba77ff75dd9ced4c612097675f.js"></script>
+                        <div class="invisibleOnMobile">
+                            <script src="//megatimer.ru/get/875759ba77ff75dd9ced4c612097675f.js"></script>
+                        </div>
+                        <div class="invisibleOnPC">
+                            <script src="//megatimer.ru/get/f81b1073471baea7fb5d5eca252715dc.js"></script>
+                        </div>
                         <button class="preview__offer-info-btn openModalBtn">
                             Получить предложение
                         </button>
@@ -2348,7 +2357,7 @@
         <footer class="footer">
             <section class="footer__content container">
                 <div class="footer__content-logo">
-                    <a href="#"><img src="./img/PC/footerLogo.png" alt="" /></a>
+                    <a href="#"><img src="./img/PC/footerLogo.png" alt="" /><div></div></a>
                     <p>Автофром</p>
                 </div>
                 <div class="footer__content-text">
