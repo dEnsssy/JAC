@@ -671,7 +671,7 @@ input[type="checkbox"]:checked + .checkmark::after {
         & input[type="number"] {
             border: 1px solid #585858;
             background: #fff;
-            color: #585858;
+            color: #585858 nt;
             line-height: 15.96px;
             @include fontSW(18px, 500);
             padding: 17px 9px;
@@ -1256,11 +1256,11 @@ input[type="number"]::-webkit-inner-spin-button {
                 }
             }
             &-details {
-                position: relative;
                 position: absolute;
                 top: 450px;
                 left: 0;
-                min-width: 100%;
+                max-width: 100%;
+                // min-width: 100vw;
             }
         }
         &__color {
@@ -1685,4 +1685,54 @@ input[type="number"]::-webkit-inner-spin-button {
         justify-content: normal;
         margin-right: 5px;
     }
+    .select2-container .select2-selection--single {
+        // max-width: 320px;
+    }
+}
+
+//стили для select2
+.select2-results__option--selectable {
+    color: #585858;
+}
+.select2-selection {
+    padding: 17px 9px;
+    @include fontSW(20px, 500);
+}
+.select2-selection--single {
+    padding: 13px 9px;
+    // min-height: 100%;
+    // height:50px ;
+}
+.select2-container .select2-selection--single {
+    height: auto;
+    width: 100%;
+    // min-width: 100%;
+    // border-radius: none ;
+}
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    top: 25%;
+    right: 2%;
+}
+.trade__form .select2-selection--single {
+    border-radius: 0 !important;
+    border: 1px solid #585858 !important;
+}
+.configurations__filters .select2-selection--single {
+    border-radius: 0 !important;
+    border: none !important;
+    border-bottom: 1px solid $textAdditionalColor !important;
+}
+.configurations__filters .select2-selection__arrow {
+}
+.configurations__filters .select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    background-image: url("/img/PC/selectArrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.configurations__filters .select2-selection__arrow b {
+    border: none !important;
 }

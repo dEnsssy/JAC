@@ -953,7 +953,7 @@ input[type=checkbox]:checked + .checkmark::after {
 .trade__text input[type=number] {
   border: 1px solid #585858;
   background: #fff;
-  color: #585858;
+  color: #585858 nt;
   line-height: 15.96px;
   font-size: 18px;
   font-weight: 500;
@@ -1611,11 +1611,10 @@ input[type=number]::-webkit-inner-spin-button {
     margin-left: -30px;
   }
   .models__car-details {
-    position: relative;
     position: absolute;
     top: 450px;
     left: 0;
-    min-width: 100%;
+    max-width: 100%;
   }
   .models__color-selector {
     margin-bottom: 172px;
@@ -2091,4 +2090,48 @@ input[type=number]::-webkit-inner-spin-button {
             justify-content: normal;
     margin-right: 5px;
   }
+}
+.select2-results__option--selectable {
+  color: #585858;
+}
+
+.select2-selection {
+  padding: 17px 9px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.select2-selection--single {
+  padding: 13px 9px;
+}
+
+.select2-container .select2-selection--single {
+  height: auto;
+  width: 100%;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 25%;
+  right: 2%;
+}
+
+.trade__form .select2-selection--single {
+  border-radius: 0 !important;
+  border: 1px solid #585858 !important;
+}
+
+.configurations__filters .select2-selection--single {
+  border-radius: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #222 !important;
+}
+
+.configurations__filters .select2-container--default .select2-selection--single .select2-selection__arrow {
+  background-image: url("/img/PC/selectArrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.configurations__filters .select2-selection__arrow b {
+  border: none !important;
 }
