@@ -172,4 +172,4 @@ burgerBtn.addEventListener("click", () => {
 });
 closeBurger.addEventListener("click", () => {
     burgerMenu.style.display = "none";
-})
+});
