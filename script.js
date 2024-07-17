@@ -179,11 +179,3 @@ $(document).ready(function () {
     $("select").select2();
 });
 
-setTimeout(() => {
-    let filtersDiv = document.querySelector(".configurations__filters");
-    let filters = filtersDiv.querySelectorAll(".select2-selection");
-    filters.forEach((filter) => {
-        filter.style.border = "10px solid $textAdditionalColor";
-        console.log(filter.style.border);
-    })
-}, 2150);
