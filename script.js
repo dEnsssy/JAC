@@ -190,7 +190,7 @@ function init() {
     var myPlacemark = new ymaps.Placemark(
         [55.630782, 37.466979],
         {
-            balloonContent: "Москва",
+            balloonContent: "город Москва, МКАД, 44-й км, влд. 1 стр. 2",
         },
         {
             iconLayout: "default#image",
