@@ -170,7 +170,7 @@ html {
         text-transform: uppercase;
         color: $textAdditionalColor;
         @include fontSW(40px, 700);
-        margin-top: 95px;
+        margin-top: 125px;
         margin-bottom: 69px;
     }
     &__car {
@@ -261,6 +261,9 @@ html {
             align-items: center;
             justify-content: center;
             margin-bottom: 22px;
+        }
+        &-btn {
+            border: 1px solid #444 !important;
         }
         &-btn,
         &-btn-arrow {
@@ -722,6 +725,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .contacts {
     &__map {
         width: 100%;
+        height: 732px;
         margin-top: 10px;
     }
     &__content {
@@ -729,6 +733,9 @@ input[type="number"]::-webkit-inner-spin-button {
         background: $textAdditionalColor;
         display: flex;
         justify-content: space-between;
+        position: relative;
+        z-index: 100;
+        margin-top: -5%;
         &-left {
             & h1 {
                 @include fontSW(23px, 700);
@@ -1131,6 +1138,7 @@ input[type="number"]::-webkit-inner-spin-button {
     .header {
         &__bgcar {
             background-image: url("/img/mobile/previewCarBg.png");
+            top:100%;
             min-height: 50vh;
             background-position: center;
             background-size: cover;
@@ -1172,7 +1180,7 @@ input[type="number"]::-webkit-inner-spin-button {
             & h2 {
                 @include fontSW(20px, 500);
                 line-height: normal;
-                margin-bottom: 15vh;
+                margin-bottom: 20vh;
             }
         }
         &__offer {
@@ -1196,7 +1204,7 @@ input[type="number"]::-webkit-inner-spin-button {
         gap: 34px;
         & > h1 {
             @include fontSW(21px, 700);
-            margin-top: 40px;
+            margin-top: 60px;
             margin-bottom: 34px;
         }
         &__car {
@@ -1287,7 +1295,6 @@ input[type="number"]::-webkit-inner-spin-button {
         }
         &__cars {
             gap: 20px;
-
             &-card {
                 border: none;
                 flex-wrap: wrap;
@@ -1383,6 +1390,7 @@ input[type="number"]::-webkit-inner-spin-button {
                 }
             }
             & button {
+                @include fontSW(16px,500);
                 padding: 17px 80px;
                 width: 100%;
                 margin-bottom: 10px;
@@ -1390,6 +1398,9 @@ input[type="number"]::-webkit-inner-spin-button {
         }
     }
     .contacts {
+        &__map{
+            height: 317px;
+        }
         &__content {
             text-align: center;
             justify-content: center;
@@ -1397,7 +1408,8 @@ input[type="number"]::-webkit-inner-spin-button {
             padding: 20px;
             min-width: 321px;
             min-height: 309px;
-
+            z-index: 100;
+            margin-top: -50px;
             &-left {
                 & h1 {
                     @include fontSW(16px, 700);
@@ -1726,7 +1738,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 .configurations__filters .select2-selection__arrow {
 }
-.configurations__filters .select2-container--default
+.configurations__filters
+    .select2-container--default
     .select2-selection--single
     .select2-selection__arrow {
     background-image: url("/img/PC/selectArrow.svg");

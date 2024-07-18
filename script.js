@@ -179,3 +179,26 @@ $(document).ready(function () {
     $("select").select2();
 });
 
+ymaps.ready(init);
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [55.630782, 37.466979], // Координаты центра карты (Москва)
+        zoom: 18,
+    });
+
+    // Можно добавить метку
+    var myPlacemark = new ymaps.Placemark(
+        [55.630782, 37.466979],
+        {
+            balloonContent: "Москва",
+        },
+        {
+            iconLayout: "default#image",
+            iconImageHref: "/img/PC/mapItem.png", // Ссылка на ваше изображение
+            iconImageSize: [135, 71], // Размер изображения
+            iconImageOffset: [-55, -70], // Смещение изображения
+        }
+    );
+
+    myMap.geoObjects.add(myPlacemark);
+}

@@ -302,7 +302,7 @@ html {
   color: #222;
   font-size: 40px;
   font-weight: 700;
-  margin-top: 95px;
+  margin-top: 125px;
   margin-bottom: 69px;
 }
 .models__car-card {
@@ -424,6 +424,9 @@ html {
       -ms-flex-pack: center;
           justify-content: center;
   margin-bottom: 22px;
+}
+.models__color-btn {
+  border: 1px solid #444 !important;
 }
 .models__color-btn, .models__color-btn-arrow {
   width: 30px;
@@ -1008,6 +1011,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .contacts__map {
   width: 100%;
+  height: 732px;
   margin-top: 10px;
 }
 .contacts__content {
@@ -1019,6 +1023,9 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
+  z-index: 100;
+  margin-top: -5%;
 }
 .contacts__content-left h1 {
   font-size: 23px;
@@ -1476,6 +1483,7 @@ input[type=number]::-webkit-inner-spin-button {
   }
   .header__bgcar {
     background-image: url("/img/mobile/previewCarBg.png");
+    top: 100%;
     min-height: 50vh;
     background-position: center;
     background-size: cover;
@@ -1519,7 +1527,7 @@ input[type=number]::-webkit-inner-spin-button {
     font-size: 20px;
     font-weight: 500;
     line-height: normal;
-    margin-bottom: 15vh;
+    margin-bottom: 20vh;
   }
   .preview__offer {
     padding: 20px 0;
@@ -1548,7 +1556,7 @@ input[type=number]::-webkit-inner-spin-button {
   .models > h1 {
     font-size: 21px;
     font-weight: 700;
-    margin-top: 40px;
+    margin-top: 60px;
     margin-bottom: 34px;
   }
   .models__car-card {
@@ -1760,9 +1768,14 @@ input[type=number]::-webkit-inner-spin-button {
     gap: 14px;
   }
   .trade__text button {
+    font-size: 16px;
+    font-weight: 500;
     padding: 17px 80px;
     width: 100%;
     margin-bottom: 10px;
+  }
+  .contacts__map {
+    height: 317px;
   }
   .contacts__content {
     text-align: center;
@@ -1774,6 +1787,8 @@ input[type=number]::-webkit-inner-spin-button {
     padding: 20px;
     min-width: 321px;
     min-height: 309px;
+    z-index: 100;
+    margin-top: -50px;
   }
   .contacts__content-left h1 {
     font-size: 16px;
